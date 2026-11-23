@@ -1,10 +1,10 @@
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <div className="flex min-h-screen flex-col items-center justify-center bg-background text-foreground">
+      <main className="flex flex-col items-center justify-between gap-4 px-4 text-center">
         <div>
-          <h1 className="text-2xl">Kredo</h1>
-          <h3  className="text-2xl[0.3]">Money that protects itself.</h3>
+          <h1 className="text-5xl font-heading font-medium tracking-tight text-foreground sm:text-6xl">Kredo</h1>
+          <h3  className="text-xl text-muted-foreground max-w-2xl">Money that protects itself.</h3>
         </div>
       </main>
     </div>

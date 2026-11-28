@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
+import { Geist, Geist_Mono, Stack_Sans_Notch } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
-const instrumentSerif = Instrument_Serif({subsets:['latin'],weight:['400'],variable:'--font-serif'});
-
-const instrumentSerifHeading = Instrument_Serif({
+const stackSansNotch = Stack_Sans_Notch({
   subsets:['latin'],
-  weight:['400'],
-  variable:'--font-heading'
+  weight:['300', '400', '500', '600'],
+  variable: "--font-stack-sans-notch",
+  display: "swap",
 });
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,10 +30,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, instrumentSerifHeading.variable, "font-serif", instrumentSerif.variable)}
+      className={cn("h-full antialiased", geistSans.variable, geistMono.variable, stackSansNotch.variable)}
       suppressHydrationWarning
     >
-      <body className={cn("min-h-screen antialiased bg-background font-sans", instrumentSerifHeading.variable, geistSans.variable)}>{children}</body>
+      <body className={cn("min-h-screen antialiased bg-background font-sans", stackSansNotch.variable, geistSans.variable)}>{children}</body>
     </html>
   );
 }
